@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
-import app from "./app.js";
-import logger from "./config/logger.config.js";
-import killerFunction from "./utils/killerFunction.js";
+import app from "./src/app.js";
+import logger from "./src/config/logger.config.js";
+import killerFunction from "./src/utils/killerFunction.js";
 import dotenv from "dotenv/config";
 import { Server } from "socket.io";
-import SocketIo from "../SocketIo.js";
+import SocketIo from "./SocketIo.js";
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => logger.info("MongoDB connected"))
